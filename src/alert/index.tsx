@@ -2,10 +2,13 @@ import t from 'prop-types';
 import React from 'react';
 
 export interface AlertProps {
+  /**
+   * @description       Alert 的类型
+   * @default           'info'
+   */
   children?: any;
   kind?: 'info' | 'positive' | 'negative' | 'warning';
 }
-
 export type KindMap = Record<Required<AlertProps>['kind'], string>;
 
 const prefixCls = 'happy-alert';
